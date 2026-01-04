@@ -57,7 +57,7 @@ const LandingPage: React.FC = () => {
               to="/support"
               className="bg-[#E42F2F] text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-[#c12727] transition-all flex items-center justify-center gap-2 group"
             >
-              지금 바로 판매량 분석하기
+              3일간 무료로 판매량 분석하기
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -255,25 +255,25 @@ const LandingPage: React.FC = () => {
           </h2>
           <div className="bg-gray-50 p-10 rounded-[3rem] border border-gray-100 mb-12">
             <div className="flex flex-col items-center justify-center gap-4 mb-8 text-[#1A2B4C]">
-              <p className="text-2xl font-bold">스타터 플랜</p>
-              <p className="text-5xl font-extrabold text-[#E42F2F]">₩10,000</p>
-              <p className="text-[#1A2B4C]/70 font-semibold">3일간 3개 상품 정밀 분석</p>
+              <p className="text-2xl font-bold">무료 체험 플랜</p>
+              <p className="text-5xl font-extrabold text-[#E42F2F]">FREE</p>
+              <p className="text-[#1A2B4C]/70 font-semibold">3일간 무료로 모든 데이터 확인</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-10 text-left text-[#1A2B4C]">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                <span className="text-sm font-bold">판매량 정밀 분석 리포트</span>
+                <span className="text-sm font-bold">3일간 무제한 이용 가능</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                <span className="text-sm font-bold">일일 판매 데이터 제공</span>
+                <span className="text-sm font-bold">실제 판매량 분석 리포트</span>
               </div>
             </div>
             <Link
               to="/support"
               className="inline-flex bg-[#E42F2F] text-white px-12 py-5 rounded-2xl text-xl font-bold hover:bg-[#c12727] transition-all shadow-xl shadow-red-200"
             >
-              데이터로 수익 내러 가기
+              3일간 무료로 판매량 분석하기
             </Link>
           </div>
         </div>

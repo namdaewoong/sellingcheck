@@ -21,7 +21,7 @@ const DetailsPage: React.FC = () => {
           {/* Sample Image Section */}
           <div className="mb-16 rounded-[2rem] overflow-hidden border border-gray-100 shadow-sm">
             <img 
-              src="https://lh3.googleusercontent.com/d/1OMwAF8nwjw5uIMpih9o3GlNVjN8Xzg88" 
+              src="https://lh3.googleusercontent.com/d/11AbnvPA97nTd5gaV5guiMVtymRl2rgFy" 
               alt="SellingCheck Data Sample" 
               className="w-full h-auto object-cover"
             />

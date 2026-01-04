@@ -1,14 +1,14 @@
 
 import React, { useState } from 'react';
 import { PricingPlan, FAQItem } from '../types';
-import { Check, ChevronDown, ChevronUp, Mail, Send } from 'lucide-react';
+import { Check, ChevronDown, ChevronUp, Mail, Send, MessageCircle } from 'lucide-react';
 
 const plans: PricingPlan[] = [
   {
-    id: 'starter',
-    name: '스타터 (3일)',
-    price: '10,000',
-    features: ['3일간 이용 가능', '총 3개 상품 분석', '일일 판매 리포트'],
+    id: 'free',
+    name: '무료 체험',
+    price: 'FREE',
+    features: ['3일 이용 가능', '3개 상품 분석', '일일 판매 리포트'],
   },
   {
     id: 'basic',
@@ -36,7 +36,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: '무료 체험 기간이 있나요?',
-    answer: '현재 별도의 무료 체험 기간은 제공하고 있지 않습니다. 스타터 플랜을 통해 저렴한 비용으로 서비스를 경험해보실 수 있습니다.',
+    answer: '무료 체험 플랜을 통해 3일간 핵심 기능을 미리 경험해보실 수 있습니다.',
   },
   {
     question: '중도 해지 시 환불이 가능한가요?',
@@ -74,8 +74,10 @@ const SupportPage: React.FC = () => {
                 )}
                 <h3 className="text-xl font-bold mb-4 text-[#1A2B4C]">{plan.name}</h3>
                 <div className="flex items-baseline gap-1 mb-8">
-                  <span className="text-3xl font-extrabold text-[#1A2B4C]">₩{plan.price}</span>
-                  <span className="text-[#1A2B4C]/70 text-sm font-bold">{plan.id === 'starter' ? '/ 3일' : '/ 월'}</span>
+                  <span className={`font-extrabold text-[#1A2B4C] ${plan.id === 'free' ? 'text-4xl' : 'text-3xl'}`}>
+                    {plan.id === 'free' ? '' : '₩'}{plan.price}
+                  </span>
+                  <span className="text-[#1A2B4C]/70 text-sm font-bold">{plan.id === 'free' ? '/ 3일' : '/ 월'}</span>
                 </div>
                 <ul className="space-y-4 mb-10">
                   {plan.features.map((feature, i) => (
@@ -94,10 +96,10 @@ const SupportPage: React.FC = () => {
                   className={`block w-full py-4 rounded-2xl font-bold text-center transition-all ${
                     plan.isPopular 
                       ? 'bg-[#E42F2F] text-white hover:bg-[#c12727]' 
-                      : 'bg-gray-100 text-[#1A2B4C] hover:bg-gray-200'
+                      : (plan.id === 'free' ? 'bg-[#1A2B4C] text-white hover:bg-[#253961]' : 'bg-gray-100 text-[#1A2B4C] hover:bg-gray-200')
                   }`}
                 >
-                  연락하기
+                  {plan.id === 'free' ? '지금 시작하기' : '연락하기'}
                 </a>
               </div>
             ))}
@@ -139,9 +141,9 @@ const SupportPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <h2 className="text-3xl font-bold mb-6 text-[#1A2B4C]">궁금한 점이 있으신가요?</h2>
-            <p className="text-[#1A2B4C]/70 mb-10 font-bold">영업시간 내 이메일로 답변해 드립니다.</p>
+            <p className="text-[#1A2B4C]/70 mb-10 font-bold">영업시간 내 가장 빠른 답변을 드립니다.</p>
             
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-[#1A2B4C]">
                   <Mail className="w-6 h-6" />
@@ -149,6 +151,23 @@ const SupportPage: React.FC = () => {
                 <div>
                   <p className="text-xs text-[#1A2B4C]/50 font-bold uppercase">이메일 문의</p>
                   <p className="font-bold text-[#1A2B4C]">sellingchekeu@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-[#FEE500]">
+                  <MessageCircle className="w-6 h-6 fill-current" />
+                </div>
+                <div>
+                  <p className="text-xs text-[#1A2B4C]/50 font-bold uppercase mb-1">카카오톡채널 문의</p>
+                  <a 
+                    href={contactUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#FEE500] text-[#1A2B4C] px-5 py-2 rounded-xl font-bold text-sm hover:bg-[#ebd300] transition-all shadow-sm"
+                  >
+                    카카오톡 셀링체크 검색
+                  </a>
                 </div>
               </div>
             </div>
