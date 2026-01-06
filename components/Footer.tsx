@@ -47,8 +47,14 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
-          <p>© 2024 SellingCheck Inc. All Rights Reserved.</p>
+        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center text-xs text-gray-500 gap-4">
+          <div className="space-y-2">
+            <div className="flex flex-wrap gap-x-4 gap-y-1">
+              <span>상호명: 지유소</span>
+              <span>사업자등록번호: 327-78-00490</span>
+            </div>
+            <p>© 2024 SellingCheck Inc. All Rights Reserved.</p>
+          </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white">개인정보처리방침</a>
             <a href="#" className="hover:text-white">이메일무단수집거부</a>
