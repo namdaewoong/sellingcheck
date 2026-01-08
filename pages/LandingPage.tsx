@@ -32,6 +32,7 @@ const data = [
 
 const LandingPage: React.FC = () => {
   const kakaoUrl = "https://pf.kakao.com/_gWxign/friend";
+  const sampleSheetUrl = "https://docs.google.com/spreadsheets/d/1upmaL2gzHiKfwHSZxFmTarJx9g92gYgORmqPdJ2Lsow/edit?usp=sharing";
 
   return (
     <div className="bg-white">
@@ -64,12 +65,14 @@ const LandingPage: React.FC = () => {
               3일간 무료로 판매량 분석하기
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <Link
-              to="/details"
+            <a
+              href={sampleSheetUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl text-lg font-bold hover:bg-white/20 transition-all flex items-center justify-center"
             >
               분석 샘플 보기
-            </Link>
+            </a>
           </div>
         </div>
       </section>

@@ -51,12 +51,10 @@ const Footer: React.FC = () => {
           <div className="space-y-2">
             <div className="flex flex-wrap gap-x-4 gap-y-1">
               <span>상호명: 지유소</span>
-              <span>대표자: 남대웅</span>
               <span>사업자등록번호: 327-78-00490</span>
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-1">
               <span>주소: 인천광역시 서구 청라커낼로 270, 2층 208호 22626호</span>
-              <span>호스팅사업자: Vercel</span>
             </div>
             <p>© 2024 SellingCheck Inc. All Rights Reserved.</p>
           </div>
