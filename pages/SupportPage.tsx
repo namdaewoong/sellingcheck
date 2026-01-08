@@ -8,7 +8,7 @@ const plans: PricingPlan[] = [
     id: 'free',
     name: '무료 체험',
     price: 'FREE',
-    features: ['3일 이용 가능', '3개 상품 분석', '일일 판매 리포트'],
+    features: ['3일 이용 가능', '5개 상품 분석', '일일 판매 리포트'],
   },
   {
     id: 'basic',
@@ -47,7 +47,7 @@ const faqs: FAQItem[] = [
 const SupportPage: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const contactUrl = "http://pf.kakao.com/_gWxign/chat";
+  const contactUrl = "https://pf.kakao.com/_gWxign/friend";
 
   return (
     <div className="bg-[#F8F9FA] min-h-screen">

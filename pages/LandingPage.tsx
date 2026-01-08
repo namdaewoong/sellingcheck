@@ -31,6 +31,8 @@ const data = [
 ];
 
 const LandingPage: React.FC = () => {
+  const kakaoUrl = "https://pf.kakao.com/_gWxign/friend";
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -53,13 +55,15 @@ const LandingPage: React.FC = () => {
             <p className="text-white font-semibold mt-4">진짜 시장규모를 측정하지 못했기 때문입니다.</p>
           </div>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              to="/support"
+            <a
+              href={kakaoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#E42F2F] text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-[#c12727] transition-all flex items-center justify-center gap-2 group"
             >
               3일간 무료로 판매량 분석하기
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
             <Link
               to="/details"
               className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl text-lg font-bold hover:bg-white/20 transition-all flex items-center justify-center"
@@ -257,24 +261,26 @@ const LandingPage: React.FC = () => {
             <div className="flex flex-col items-center justify-center gap-4 mb-8 text-[#1A2B4C]">
               <p className="text-2xl font-bold">무료 체험 플랜</p>
               <p className="text-5xl font-extrabold text-[#E42F2F]">FREE</p>
-              <p className="text-[#1A2B4C]/70 font-semibold">3일간 무료로 모든 데이터 확인</p>
+              <p className="text-[#1A2B4C]/70 font-semibold">3일간 5개 상품 무료 체험</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-10 text-left text-[#1A2B4C]">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                <span className="text-sm font-bold">3일간 무제한 이용 가능</span>
+                <span className="text-sm font-bold">3일간 5개 상품 분석 가능</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
                 <span className="text-sm font-bold">실제 판매량 분석 리포트</span>
               </div>
             </div>
-            <Link
-              to="/support"
+            <a
+              href={kakaoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex bg-[#E42F2F] text-white px-12 py-5 rounded-2xl text-xl font-bold hover:bg-[#c12727] transition-all shadow-xl shadow-red-200"
             >
               3일간 무료로 판매량 분석하기
-            </Link>
+            </a>
           </div>
         </div>
       </section>
